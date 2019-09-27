@@ -5,10 +5,11 @@ const Post = () => {
 
     return (
         <div className={post.post}>
-            <img src='https://www.marinamirage.com.au/wp-content/uploads/logo_australia-post.png'/>
+
             <div className={post.user}>
-                <h4>UserName</h4>
-                <h4>UserLastName</h4>
+                <img src='https://www.marinamirage.com.au/wp-content/uploads/logo_australia-post.png'/>
+                <span>UserName</span>
+                <span>UserLastName</span>
             </div>
             <p>Me y les doy un respiro de mí.
                 Por algo será que subo cada 3 o 4 días fotos mías, casi siempre primeros planos de mi cara sonriente.

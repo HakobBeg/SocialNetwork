@@ -8,10 +8,11 @@ import Timline from "./components/Timline/Timline";
 import {BrowserRouter,Route} from "react-router-dom";
 import Messages from "./components/Messages/Messages";
 
+
 function App() {
     return (
         <BrowserRouter>
-        <div>
+
             <div className="navbarHeader">
                 <Header/>
                 <NavBar/>
@@ -22,11 +23,12 @@ function App() {
 
 
 
-                <Route path = '/home' component = {Timline}/>
+                <Route path = '/home' component = {Timline} />
                 <Route path = '/messages' component = {Messages}/>
 
 
-        </div>
+
+
 
         </BrowserRouter>
     );

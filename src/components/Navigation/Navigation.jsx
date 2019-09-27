@@ -8,16 +8,16 @@ const NavBar = () => {
         <nav>
             <ul>
                 <li>
-                    <a><NavLink to='/home'>Home </NavLink></a>
+                    <NavLink to='/home' activeClassName={nav.active}>Home </NavLink>
                 </li>
                 <li>
-                    <a><NavLink to='/myPosts'>Posts </NavLink></a>
+                    <NavLink to='/myPosts' activeClassName={nav.active}>Posts </NavLink>
                 </li>
                 <li>
-                    <a><NavLink to='/messages'>Messages </NavLink></a>
+                    <NavLink to='/messages' activeClassName={nav.active}>Messages </NavLink>
                 </li>
                 <li>
-                    <a><NavLink to='/profile'>Profile </NavLink></a>
+                    <NavLink to='/profile' activeClassName={nav.active}>Profile </NavLink>
                 </li>
             </ul>
 <div className={nav.searchBar}>
