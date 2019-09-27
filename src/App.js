@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header/Header";
+import NavBar from "./components/Navigation/Navigation";
+import TopNews from "./components/TopNews/TopNews";
+import Friends from "./components/Friends/Friends";
+import Timline from "./components/Timline/Timline";
+import {BrowserRouter,Route} from "react-router-dom";
+import Messages from "./components/Messages/Messages";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+        <div>
+            <div className="navbarHeader">
+                <Header/>
+                <NavBar/>
+            </div>
+            <TopNews/>
+            <Friends/>
+
+
+
+
+                <Route path = '/home' component = {Timline}/>
+                <Route path = '/messages' component = {Messages}/>
+
+
+        </div>
+
+        </BrowserRouter>
+    );
 }
+
 
 export default App;

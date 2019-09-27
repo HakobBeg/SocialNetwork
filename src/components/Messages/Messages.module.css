@@ -1,0 +1,11 @@
+.messagesOf {
+
+
+    position: relative;
+    margin-top: 10%;
+    width: 50%;
+    height: 100px;
+    left: 25%;
+    z-index: -1;
+    background-color: black;
+}

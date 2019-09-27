@@ -1,0 +1,21 @@
+.timline
+{
+position: relative;
+
+    margin-top: 10%;
+    left: 25%;
+    width: 50%;
+z-index: -1;
+}
+
+.timline h1
+{
+    font-size: 50px;
+    text-align: center;
+    color: #586485;
+    margin-bottom: 20px;
+}
+
+
+
+
