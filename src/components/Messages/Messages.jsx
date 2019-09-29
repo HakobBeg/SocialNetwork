@@ -21,45 +21,59 @@ const Friend = (props) => {
 
 const Message = () => {
     return (<div className={messages.mesDiv}>
-            <img src='https://png.pngtree.com/element_pic/16/11/02/bd886d7ccc6f8dd8db17e841233c9656.jpg'/>
-        <div className={messages.messageContent}>
 
+        <div className={messages.messageContent}>
+            <span>Hi! how are You?</span>
         </div>
         </div>
     );
 }
 
 
-const Messages = () => {
+const MessageCont = (props)=>
+{
 
+    return(
+      <div className={messages.messageCont}>
+            <h1>{props.user.userName + ' ' + props.user.userLastName}</h1>
+            <Message/>
+      </div>
+    );
+
+}
+
+
+const Messages = (props) => {
+
+    let friendField = props.users.users.map(item => <Friend path={item.id} userName={item.userName} userLastName={item.userLastName}/>);
     return (
         <div className={messages.messageBox}>
             <h1>Messages</h1>
 
             <div className={messages.messagesContent}>
                 <div className={messages.peoples}>
-                    <Friend imgPath='https://png.pngtree.com/element_pic/17/03/25/ec98824ea2dacb618e95f750be66e52b.jpg'
-                            userName='Hakob' userLastName='Beglaryan' path='1'/>
-                    <Friend imgPath='https://png.pngtree.com/element_pic/17/03/25/ec98824ea2dacb618e95f750be66e52b.jpg'
-                            userName='Nelson' userLastName='Mandela' path='2'/>
-                    <Friend imgPath='https://png.pngtree.com/element_pic/17/03/25/ec98824ea2dacb618e95f750be66e52b.jpg'
-                            userName='Arnold' userLastName='Babikyan' path='3'/>
-                    <Friend imgPath='https://png.pngtree.com/element_pic/17/03/25/ec98824ea2dacb618e95f750be66e52b.jpg'
-                            userName='Urukbek' userLastName='Simonyan' path='4'/>
-                    <Friend imgPath='https://png.pngtree.com/element_pic/17/03/25/ec98824ea2dacb618e95f750be66e52b.jpg'
-                            userName='Antonio' userLastName='Vivaldi' path='5'/>
-                    <Friend imgPath='https://png.pngtree.com/element_pic/17/03/25/ec98824ea2dacb618e95f750be66e52b.jpg'
-                            userName='Patric' userLastName='Vivaldi' path='6'/>
-                    <Friend imgPath='https://png.pngtree.com/element_pic/17/03/25/ec98824ea2dacb618e95f750be66e52b.jpg'
-                            userName='Sergio' userLastName='Chishil' path='7'/>
-                    <Friend imgPath='https://png.pngtree.com/element_pic/17/03/25/ec98824ea2dacb618e95f750be66e52b.jpg'
-                            userName='Gazan' userLastName='Militos' path='8'/>
-                    <Friend imgPath='https://png.pngtree.com/element_pic/17/03/25/ec98824ea2dacb618e95f750be66e52b.jpg'
-                            userName='Valoc' userLastName='Katuyan' path='9'/>
+                    {friendField[0]}
+                    {friendField[1]}
+                    {friendField[2]}
+                    {friendField[3]}
+                    {friendField[4]}
+                    {friendField[5]}
+                    {friendField[6]}
+                    {friendField[7]}
+                    {friendField[8]}
+
 
                 </div>
                 <div className={messages.dialog}>
-                    <Route path = '/messages/1' component = {Message}/>
+                    <Route path = '/messages/1'  render={()=><MessageCont user={props.users.users[1]}/>}/>
+                    <Route path = '/messages/2'  render={()=><MessageCont user={props.users.users[2]}/>}/>
+                    <Route path = '/messages/3'  render={()=><MessageCont user={props.users.users[3]}/>}/>
+                    <Route path = '/messages/4'  render={()=><MessageCont user={props.users.users[4]}/>}/>
+                    <Route path = '/messages/5'  render={()=><MessageCont user={props.users.users[5]}/>}/>
+                    <Route path = '/messages/6'  render={()=><MessageCont user={props.users.users[6]}/>}/>
+                    <Route path = '/messages/7'  render={()=><MessageCont user={props.users.users[7]}/>}/>
+                    <Route path = '/messages/8'  render={()=><MessageCont user={props.users.users[8]}/>}/>
+                    <Route path = '/messages/9'  render={()=><MessageCont user={props.users.users[9]}/>}/>
                 </div>
                 </div>
             </div>

@@ -5,30 +5,28 @@ import NavBar from "./components/Navigation/Navigation";
 import TopNews from "./components/TopNews/TopNews";
 import Friends from "./components/Friends/Friends";
 import Timline from "./components/Timline/Timline";
-import {BrowserRouter,Route} from "react-router-dom";
+import {BrowserRouter, Route} from "react-router-dom";
 import Messages from "./components/Messages/Messages";
 
 
-function App() {
+
+function App(props) {
+
     return (
+
         <BrowserRouter>
 
             <div className="navbarHeader">
+
                 <Header/>
                 <NavBar/>
+
             </div>
             <TopNews/>
             <Friends/>
 
-
-
-
-                <Route path = '/home' component = {Timline} />
-                <Route path = '/messages' component = {Messages}/>
-
-
-
-
+            <Route path='/home' render={()=><Timline posts={props.state}/>}/>
+            <Route path='/messages' render={()=><Messages users={props.state}/>}/>
 
         </BrowserRouter>
     );
