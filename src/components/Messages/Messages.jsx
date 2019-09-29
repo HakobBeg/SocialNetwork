@@ -1,7 +1,7 @@
 import React from 'react';
 import messages from './Messages.module.css';
 
-import {BrowserRouter, NavLink} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import {Route} from "react-router-dom";
 
 

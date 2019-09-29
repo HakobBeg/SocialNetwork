@@ -32,8 +32,12 @@ let state = {
 
 
     addPost(postText,poster) {
+
+
             let newPost = {postTxt:postText,user:poster};
-            state.users.push(newPost);
+            state.posts.unshift(newPost);
+
+            console.log(state.posts);
             rerenderPage();
     }
 
