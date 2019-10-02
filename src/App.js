@@ -25,8 +25,8 @@ function App(props) {
             <TopNews/>
             <Friends/>
 
-            <Route path='/home' render={()=><Timline posts={props.state}/>}/>
-            <Route path='/messages' render={()=><Messages users={props.state}/>}/>
+            <Route path='/home' render={()=><Timline store={props.store}/>}/>
+            <Route path='/messages' render={()=><Messages store={props.store}/>}/>
 
         </BrowserRouter>
     );

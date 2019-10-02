@@ -1,19 +1,26 @@
-
-
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import {rerenderPage} from './render'
+import React from 'react';
+import ReactDOM from "react-dom";
+import {BrowserRouter} from "react-router-dom";
+import App from "./App";
+import store, {subscribe} from './State';
 
 
-
-   rerenderPage();
-
+let rerenderPage = () => {
 
 
+    ReactDOM.render(
+        <BrowserRouter>
+           <App store = {store}/>
+        </BrowserRouter>
+        ,document.getElementById('root')
+    );
+};
 
 
-
-
+subscribe(rerenderPage);
+rerenderPage();
 
 
 // If you want your app to work offline and load faster, you can change
