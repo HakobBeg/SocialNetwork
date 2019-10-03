@@ -63,10 +63,13 @@ const Messages = (props) => {
                     {friendField[6]}
                     {friendField[7]}
                     {friendField[8]}
+                    {friendField[8]}
+                    {friendField[8]}
 
 
                 </div>
                 <div className={messages.dialog}>
+
                     <Route path = '/messages/1'  render={()=><MessageCont user={props.store.state.users[1]}/>}/>
                     <Route path = '/messages/2'  render={()=><MessageCont user={props.store.state.users[2]}/>}/>
                     <Route path = '/messages/3'  render={()=><MessageCont user={props.store.state.users[3]}/>}/>

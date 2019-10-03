@@ -1,7 +1,11 @@
+import AddPostReducer from "./AddPostReducer";
+import UpdateNewPostReducer from "./UpdareNewPostReducer";
+import AddNewPostActionCreator from "./AddPostReducer";
+import UpdateNewPostActionCreator from "./UpdareNewPostReducer";
 
 
 
-    let store = {
+let store = {
 
         state: {
             users: [
@@ -28,6 +32,11 @@
                 },
                 {postTxt: 'Hey i open new website for programmer wich start programming now', user: 'Benik Barseghyan'},
                 {postTxt: 'wtf! is there some peoples that can give me these house', user: 'Arto TBoyajyan'},
+                {postTxt: 'wtf! is there some peoples that can give me these house', user: 'Arto TBoyajyan'},
+                {postTxt: 'wtf! is there some peoples that can give me these house', user: 'Arto TBoyajyan'},
+                {postTxt: 'wtf! is there some peoples that can give me these house', user: 'Arto TBoyajyan'},
+                {postTxt: 'wtf! is there some peoples that can give me these house', user: 'Arto TBoyajyan'},
+                {postTxt: 'wtf! is there some peoples that can give me these house', user: 'Arto TBoyajyan'},
 
             ],
 
@@ -36,37 +45,24 @@
             },
         },
 
-            updateNewPost(newText) {
 
-                this.state.newPostText = newText;
-                rerenderPage();
-            },
+        dispatch(action)
+        {
 
-            addPost(postText, poster) {
+            AddPostReducer(this.state,action);
+            UpdateNewPostReducer(this.state,action);
 
-
-                let newPost = {postTxt: postText, user: poster};
-                store.state.posts.unshift(newPost);
-                rerenderPage();
-            }
+            rerenderPage();
+        }
 
 
 
     }
 
-
-
-
-
-
-
 let rerenderPage = ()=>
 {
     console.log('page rerendered');
 }
-
-
-
 
 export const subscribe  = (observer) =>
 {

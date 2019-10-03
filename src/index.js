@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import {BrowserRouter} from "react-router-dom";
 import App from "./App";
-import store, {subscribe} from './State';
+import store, {subscribe} from './Redux/State';
 
 
 let rerenderPage = () => {

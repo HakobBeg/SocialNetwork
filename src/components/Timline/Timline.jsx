@@ -1,6 +1,7 @@
 import React from 'react';
 import tmLine from './Timline.module.css'
 import Post from "../Post/Post";
+import {AddPostActionCreator} from "../../Redux/AddPostReducer";
 
 
 
@@ -8,7 +9,7 @@ import Post from "../Post/Post";
 
 const Timline = (props) => {
 
-    debugger;
+
 
 
     let postElements = props.store.state.posts.map(item => <Post user={item.user} text={item.postTxt}/>)
@@ -16,15 +17,18 @@ const Timline = (props) => {
 
     let addNewPost = () => {
 
+
+
         let text = newPostElement.current.value;
         newPostElement.current.value = '';
-        props.store.addPost(text,'Hakob Beglaryan');
+        props.store.dispatch(AddPostActionCreator(text,'Hakob Beglaryan'));
+
     }
 
     let newPostTextChange = () =>
     {
 
-        props.store.updateNewPost(newPostElement.current.value);
+        props.store.dispatch({type: 'UPDATE-NEW-POST',newText:newPostElement.current.value});
 
     }
 
@@ -38,12 +42,7 @@ const Timline = (props) => {
                 <button onClick={addNewPost}>Add Post</button>
             </div>
 
-            {postElements[0]}
-            {postElements[1]}
-            {postElements[2]}
-            {postElements[3]}
-            {postElements[4]}
-            {postElements[5]}
+            {postElements}
 
         </div>
 

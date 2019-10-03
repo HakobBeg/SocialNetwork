@@ -7,6 +7,7 @@ import Friends from "./components/Friends/Friends";
 import Timline from "./components/Timline/Timline";
 import {BrowserRouter, Route} from "react-router-dom";
 import Messages from "./components/Messages/Messages";
+import store from "./Redux/State";
 
 
 

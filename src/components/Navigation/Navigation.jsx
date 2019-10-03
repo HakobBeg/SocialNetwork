@@ -11,10 +11,10 @@ const NavBar = () => {
                     <NavLink to='/home' activeClassName={nav.active}>Home </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/myPosts' activeClassName={nav.active}>Posts </NavLink>
+                    <NavLink to='/myPosts' activeClassName={nav.active}>My Posts </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/messages' activeClassName={nav.active}>Messages </NavLink>
+                    <NavLink to='/messages/1' activeClassName={nav.active}>Messages </NavLink>
                 </li>
                 <li>
                     <NavLink to='/profile' activeClassName={nav.active}>Profile </NavLink>

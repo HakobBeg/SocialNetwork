@@ -47,6 +47,7 @@ h1 {
     background-color: #e9ebee;
     border-radius: 10px;
     display: inline-block;
+    overflow: auto;
 }
 
 .dialog {
